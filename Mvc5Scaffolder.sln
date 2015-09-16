@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{85A79D
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Helper", "Repository.Helper\Repository.Helper.csproj", "{99482B5D-77A4-4CEB-A864-80096E810D1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,12 @@ Global
 		{BDBD18FD-EDB6-488B-B7A9-984970CA7CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDBD18FD-EDB6-488B-B7A9-984970CA7CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BDBD18FD-EDB6-488B-B7A9-984970CA7CEE}.Release|x86.ActiveCfg = Release|Any CPU
+		{99482B5D-77A4-4CEB-A864-80096E810D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99482B5D-77A4-4CEB-A864-80096E810D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99482B5D-77A4-4CEB-A864-80096E810D1D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99482B5D-77A4-4CEB-A864-80096E810D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99482B5D-77A4-4CEB-A864-80096E810D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99482B5D-77A4-4CEB-A864-80096E810D1D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,5 +98,6 @@ Global
 		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C} = {3AD1755C-D626-41AA-91C9-0587255D8055}
 		{86F86650-EE3C-4372-8FEC-40C2FE015022} = {3AD1755C-D626-41AA-91C9-0587255D8055}
 		{BDBD18FD-EDB6-488B-B7A9-984970CA7CEE} = {AB9FA9EB-1296-49A1-B2E2-F4E6A16AC6EA}
+		{99482B5D-77A4-4CEB-A864-80096E810D1D} = {3AD1755C-D626-41AA-91C9-0587255D8055}
 	EndGlobalSection
 EndGlobal

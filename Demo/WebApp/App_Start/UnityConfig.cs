@@ -12,6 +12,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using Microsoft.Owin.Security;
 using System.Web;
+using Repository.Helper;
 
 namespace WebApp.App_Start
 {
@@ -66,25 +67,31 @@ namespace WebApp.App_Start
             container.RegisterType<IUnitOfWorkAsync, UnitOfWork>(new PerRequestLifetimeManager());
             container.RegisterType<IDataContextAsync, StoreContext>(new PerRequestLifetimeManager());
 
-            container.RegisterType<IRepositoryAsync<Product>, Repository<Product>>();
+            var list = RepositoryRegister.GetRepositotyListForDbContext(typeof(IRepositoryAsync<>), typeof(Repository<>), typeof(StoreContext));
+            foreach (var key in list.Keys)
+            {
+                container.RegisterType(key, list[key]);
+            }
+
+            // container.RegisterType<IRepositoryAsync<Product>, Repository<Product>>();
             container.RegisterType<IProductService, ProductService>();
-            container.RegisterType<IRepositoryAsync<Category>, Repository<Category>>();
+            //container.RegisterType<IRepositoryAsync<Category>, Repository<Category>>();
             container.RegisterType<ICategoryService, CategoryService>();
-            container.RegisterType<IRepositoryAsync<Order>, Repository<Order>>();
+            //container.RegisterType<IRepositoryAsync<Order>, Repository<Order>>();
             container.RegisterType<IOrderService, OrderService>();
 
-            container.RegisterType<IRepositoryAsync<Company>, Repository<Company>>();
+            //container.RegisterType<IRepositoryAsync<Company>, Repository<Company>>();
             container.RegisterType<ICompanyService, CompanyService>();
 
-            container.RegisterType<IRepositoryAsync<Department>, Repository<Department>>();
+            // container.RegisterType<IRepositoryAsync<Department>, Repository<Department>>();
             container.RegisterType<IDepartmentService, DepartmentService>();
 
-            container.RegisterType<IRepositoryAsync<Work>, Repository<Work>>();
+            //container.RegisterType<IRepositoryAsync<Work>, Repository<Work>>();
             container.RegisterType<IWorkService, WorkService>();
 
-            container.RegisterType<IRepositoryAsync<BaseCode>, Repository<BaseCode>>();
+            // container.RegisterType<IRepositoryAsync<BaseCode>, Repository<BaseCode>>();
             container.RegisterType<IBaseCodeService, BaseCodeService>();
-            container.RegisterType<IRepositoryAsync<CodeItem>, Repository<CodeItem>>();
+            //container.RegisterType<IRepositoryAsync<CodeItem>, Repository<CodeItem>>();
             //container.RegisterType<ICodeItemService, CodeItemService>();
             //container.RegisterType<IRepositoryAsync<Order>, Repository<Order>>();
             //container.RegisterType<IOrderService, OrderService>();

@@ -29,7 +29,7 @@ namespace WebApp
 
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, UserConfiguration>());
-
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StoreContext, Configuration>());
         }
     }
 }

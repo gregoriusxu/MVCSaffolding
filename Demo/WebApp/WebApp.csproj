@@ -242,6 +242,10 @@
     <Compile Include="Migrations\201508180723391_T1.Designer.cs">
       <DependentUpon>201508180723391_T1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509010850386_T2.cs" />
+    <Compile Include="Migrations\201509010850386_T2.Designer.cs">
+      <DependentUpon>201509010850386_T2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -675,6 +679,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Repository.Helper\Repository.Helper.csproj">
+      <Project>{99482b5d-77a4-4ceb-a864-80096e810d1d}</Project>
+      <Name>Repository.Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Source\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
       <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
       <Name>Repository.Pattern.Ef6</Name>
@@ -697,6 +705,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508180723391_T1.resx">
       <DependentUpon>201508180723391_T1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509010850386_T2.resx">
+      <DependentUpon>201509010850386_T2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
